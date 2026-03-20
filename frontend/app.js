@@ -167,15 +167,15 @@ function displayResults(data) {
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="width: 5%;">Rank</th>
-                        <th style="width: 12%;">Candidate</th>
-                        <th style="width: 8%;">TF-IDF</th>
-                        <th style="width: 10%;">Skill %</th>
-                        <th style="width: 8%;">Score</th>
-                        <th style="width: 12%;">Hire Status</th>
-                        <th style="width: 8%;">Skills</th>
-                        <th style="width: 18%;">Strengths</th>
-                        <th style="width: 19%;">Key Gaps</th>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 14%;">Candidate</th>
+                        <th style="width: 9%;">TF-IDF Score</th>
+                        <th style="width: 10%;">Skill Match</th>
+                        <th style="width: 8%;">Recommendation</th>
+                        <th style="width: 8%;">Combined</th>
+                        <th style="width: 8%;">Skills Match</th>
+                        <th style="width: 18%;">Key Strengths</th>
+                        <th style="width: 20%;">Key Gaps</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -183,13 +183,13 @@ function displayResults(data) {
                         <tr>
                             <td><strong>#${idx + 1}</strong></td>
                             <td><strong>${result.candidate_name}</strong></td>
-                            <td><span class="badge bg-info">${result.tfidf_score}</span></td>
-                            <td><span class="badge bg-primary">${result.skill_match}%</span></td>
-                            <td><span class="badge bg-secondary" style="font-size: 0.95em; padding: 0.5rem 0.8rem;">${result.combined_score.toFixed(1)}</span></td>
+                            <td><span class="badge" style="background-color: #0891b2; color: white; padding: 0.5rem 0.8rem;">${result.tfidf_score}</span></td>
+                            <td><span class="badge" style="background-color: #3b82f6; color: white; padding: 0.5rem 0.8rem;">${result.skill_match}%</span></td>
                             <td>${getRecommendationBadge(result.recommendation)}</td>
+                            <td><span class="badge" style="background-color: #64748b; color: white; padding: 0.5rem 0.8rem;">${result.combined_score.toFixed(1)}</span></td>
                             <td><small><strong>${result.matched_skills}/${result.total_required_skills}</strong></small></td>
-                            <td><small>${result.strengths.length > 0 ? result.strengths.join(", ") : "—"}</small></td>
-                            <td><small style="color: #fca5a5;"><strong>${result.gaps.length > 0 ? result.gaps.slice(0, 4).join(", ") : "✓ Complete match"}</strong></small></td>
+                            <td><small><strong style="color: #86efac;">${result.strengths.length > 0 ? result.strengths.join(", ") : "No matches"}</strong></small></td>
+                            <td><small><strong style="color: #fca5a5;">${result.gaps.length > 0 ? result.gaps.join(", ") : "✓ No gaps"}</strong></small></td>
                         </tr>
                     `).join("")}
                 </tbody>
