@@ -395,17 +395,18 @@ textarea.form-control {
 .table td {
     padding: 1.1rem 1.2rem;
     border-bottom: 1px solid var(--border-color);
-    color: var(--text-primary);
+    color: #ffffff;
     font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .table tbody tr {
-    background-color: var(--dark-secondary);
+    background-color: #0f172a;
     transition: all 0.3s ease;
 }
 
 .table tbody tr:hover {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(59, 130, 246, 0.2);
     border-left: 3px solid var(--primary);
 }
 
@@ -508,8 +509,8 @@ footer p {
 
 /* Summary Cards */
 .summary-card {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
-    border: 1px solid var(--border-color);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: 12px;
     padding: 1.5rem;
     display: flex;
@@ -552,7 +553,7 @@ footer p {
 .summary-content h6 {
     font-weight: 700;
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: #cbd5e1;
     margin: 0 0 5px 0;
     letter-spacing: 0.5px;
 }
@@ -560,7 +561,7 @@ footer p {
 .summary-content p {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: #ffffff;
     margin: 0;
 }
 
