@@ -167,14 +167,15 @@ function displayResults(data) {
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="width: 8%;">Rank</th>
-                        <th style="width: 15%;">Candidate</th>
-                        <th style="width: 10%;">TF-IDF</th>
-                        <th style="width: 12%;">Skill Match</th>
-                        <th style="width: 12%;">Score</th>
-                        <th style="width: 15%;">Recommendation</th>
-                        <th style="width: 10%;">Skills</th>
-                        <th>Details</th>
+                        <th style="width: 5%;">Rank</th>
+                        <th style="width: 12%;">Candidate</th>
+                        <th style="width: 8%;">TF-IDF</th>
+                        <th style="width: 10%;">Skill %</th>
+                        <th style="width: 8%;">Score</th>
+                        <th style="width: 12%;">Hire Status</th>
+                        <th style="width: 8%;">Skills</th>
+                        <th style="width: 18%;">Strengths</th>
+                        <th style="width: 19%;">Key Gaps</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -184,15 +185,11 @@ function displayResults(data) {
                             <td><strong>${result.candidate_name}</strong></td>
                             <td><span class="badge bg-info">${result.tfidf_score}</span></td>
                             <td><span class="badge bg-primary">${result.skill_match}%</span></td>
-                            <td><span class="badge bg-secondary" style="font-size: 1.05em;">${result.combined_score.toFixed(1)}</span></td>
+                            <td><span class="badge bg-secondary" style="font-size: 0.95em; padding: 0.5rem 0.8rem;">${result.combined_score.toFixed(1)}</span></td>
                             <td>${getRecommendationBadge(result.recommendation)}</td>
                             <td><small><strong>${result.matched_skills}/${result.total_required_skills}</strong></small></td>
-                            <td>
-                                <small>
-                                    <strong>Strengths:</strong> ${result.strengths.length > 0 ? result.strengths.join(", ") : "None"}<br>
-                                    <strong>Gaps:</strong> ${result.gaps.length > 0 ? result.gaps.slice(0, 3).join(", ") : "Complete match"}
-                                </small>
-                            </td>
+                            <td><small>${result.strengths.length > 0 ? result.strengths.join(", ") : "—"}</small></td>
+                            <td><small style="color: #fca5a5;"><strong>${result.gaps.length > 0 ? result.gaps.slice(0, 4).join(", ") : "✓ Complete match"}</strong></small></td>
                         </tr>
                     `).join("")}
                 </tbody>
