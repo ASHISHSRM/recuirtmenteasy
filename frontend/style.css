@@ -370,6 +370,7 @@ textarea.form-control {
     border-spacing: 0;
     margin-top: 2rem;
     background-color: #1e293b !important;
+    --bs-table-bg: #1e293b !important;
 }
 
 .table-responsive {
@@ -381,17 +382,19 @@ textarea.form-control {
 }
 
 .table thead {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%) !important;
+    display: table-header-group !important;
 }
 
 .table th {
-    font-weight: 700;
-    border: none;
-    padding: 1.2rem;
-    text-align: left;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    color: white !important;
+    font-weight: 700 !important;
+    border: none !important;
+    padding: 1.2rem !important;
+    text-align: left !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.5px !important;
+    color: #ffffff !important;
+    background-color: transparent !important;
 }
 
 .table td {
@@ -400,6 +403,10 @@ textarea.form-control {
     color: #ffffff !important;
     font-size: 0.95rem;
     font-weight: 500;
+    background-color: #1e293b !important;
+}
+
+.table tbody {
     background-color: #1e293b !important;
 }
 
