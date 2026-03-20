@@ -509,8 +509,8 @@ footer p {
 
 /* Summary Cards */
 .summary-card {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.20) 0%, rgba(59, 130, 246, 0.12) 100%);
+    border: 2px solid rgba(59, 130, 246, 0.4);
     border-radius: 12px;
     padding: 1.5rem;
     display: flex;
@@ -520,9 +520,9 @@ footer p {
 }
 
 .summary-card:hover {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.18) 100%);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px -5px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 30px -5px rgba(59, 130, 246, 0.4);
 }
 
 .summary-icon {
