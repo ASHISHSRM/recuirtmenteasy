@@ -369,6 +369,7 @@ textarea.form-control {
     border-collapse: separate;
     border-spacing: 0;
     margin-top: 2rem;
+    background-color: #1e293b !important;
 }
 
 .table-responsive {
@@ -376,6 +377,7 @@ textarea.form-control {
     overflow: hidden;
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+    background-color: #1e293b !important;
 }
 
 .table thead {
@@ -389,24 +391,25 @@ textarea.form-control {
     text-align: left;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
-    color: white;
+    color: white !important;
 }
 
 .table td {
     padding: 1.1rem 1.2rem;
     border-bottom: 1px solid var(--border-color);
-    color: #ffffff;
+    color: #ffffff !important;
     font-size: 0.95rem;
     font-weight: 500;
+    background-color: #1e293b !important;
 }
 
 .table tbody tr {
-    background-color: #0f172a;
+    background-color: #1e293b !important;
     transition: all 0.3s ease;
 }
 
 .table tbody tr:hover {
-    background-color: rgba(59, 130, 246, 0.2);
+    background-color: rgba(59, 130, 246, 0.25) !important;
     border-left: 3px solid var(--primary);
 }
 
